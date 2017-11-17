@@ -24,13 +24,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 		notification.title = "Notification Title"
 		notification.subtitle = "Notification Subtitle"
 		notification.informativeText = "Notification informative text..."
-		notification.contentImage = NSImage(named: "contentImg")
+		notification.contentImage = NSImage(named: NSImage.Name(rawValue: "contentImg"))
 		notification.hasActionButton = true
 		notification.actionButtonTitle = "Action"
 		notification.otherButtonTitle = "Clear"
 		
 		// Below this is private (not documented)
-		notification.setValue(NSImage(named: "img"), forKey: "_identityImage")
+		notification.setValue(NSImage(named: NSImage.Name(rawValue: "img")), forKey: "_identityImage")
 		notification.setValue(true, forKey: "_identityImageHasBorder")
 		notification.setValue(true, forKey: "_ignoresDoNotDisturb")
 		notification.setValue(false, forKey: "_lockscreenOnly")
