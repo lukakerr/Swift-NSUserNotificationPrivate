@@ -1,4 +1,4 @@
-# NSUserNotificationPrivate in Swift 3
+# NSUserNotificationPrivate in Swift 4
 
 Simply open `NSUserNotificationPrivate.xcodeproj` and run.
 
@@ -15,7 +15,7 @@ In the `NSUserNotificationPrivate-Bridging-Header.h` (Foundation.framework class
 To set `_identityImage`, or any other private property, call the instance method `setValue`:
 
 ```swift
-notification.setValue(NSImage(named: "img"), forKey: "_identityImage")
+notification.setValue(NSImage(named: NSImage.Name(rawValue: "img")), forKey: "_identityImage")
 notification.setValue(true, forKey: "_clearable")
 notification.setValue(5, forKey: "_badgeCount")
 ```
